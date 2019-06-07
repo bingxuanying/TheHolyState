@@ -12,8 +12,8 @@ namespace Assets.Scripts
         private bool Polluted { get; set; }
         private int SlimeWaiting { get; set; } = 0;
         private float Timer { get; set; } = 0;
-        public float GenerateTime { get; set; } = 10;
-        public GameObject SlimePrefab { get; set; }
+        public float GenerateTime = 10;
+        public GameObject SlimePrefab;
 
         void Start()
         {

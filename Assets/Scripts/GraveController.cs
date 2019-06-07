@@ -5,8 +5,8 @@ namespace Assets.Scripts
     public class GraveController : MonoBehaviour
     {
         private float Timer { get; set; } = 0;
-        public GameObject GeneratedPrefab { get; set; }
-        public float GenerateTime { get; set; } = 10;
+        public GameObject GeneratedPrefab;
+        public float GenerateTime = 10;
 
         // Start is called before the first frame update
         void Start()
