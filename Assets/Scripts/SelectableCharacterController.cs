@@ -21,6 +21,14 @@ namespace Assets.Scripts
             _spriteRenderer.color = Color.white;
         }
 
+        void OnMouseUp()
+        {
+            if (!(Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl) ||
+                  Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+                DeselectAll(null);
+            OnSelect(null);
+        }
+
         public void OnPointerClick(PointerEventData eventData)
         {
             if (!(Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl) ||

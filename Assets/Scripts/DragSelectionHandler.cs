@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
-    internal class DragSelectionHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+    internal class DragSelectionHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
     {
         public Image SelectionBoxImage;
 
@@ -60,6 +60,13 @@ namespace Assets.Scripts
                     selectable.OnSelect(eventData);
                 }
             }
+        }
+
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            if (!(Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl) ||
+                  Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+                SelectableCharacterController.DeselectAll(new BaseEventData(EventSystem.current));
         }
     }
 }
