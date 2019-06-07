@@ -64,9 +64,12 @@ namespace Assets.Scripts
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            if (!(Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl) ||
-                  Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
-                SelectableCharacterController.DeselectAll(new BaseEventData(EventSystem.current));
+            if (eventData.button == PointerEventData.InputButton.Left)
+            {
+                if (!(Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl) ||
+                      Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+                    SelectableCharacterController.DeselectAll(new BaseEventData(EventSystem.current));
+            }
         }
     }
 }
