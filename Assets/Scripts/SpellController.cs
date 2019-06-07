@@ -9,6 +9,7 @@ namespace Assets.Scripts
         private Rigidbody2D _rigidbody2D;
         public float Speed = 1000;
         public GameObject Target;
+        public float Damage = 3;
 
         private void Start()
         {
@@ -33,7 +34,7 @@ namespace Assets.Scripts
             if (Target == collision.transform.gameObject)
             {
                 var hp = Target.GetComponent<HPController>();
-                hp.HP -= 3;
+                hp.Hurt(Damage);
                 Destroy(gameObject);
             }
         }

@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5867033384114536459}
   - component: {fileID: 1687145619835823728}
   - component: {fileID: 5127128133639324319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,9 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2726878e2121074438386c46ad18c7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPBar: {fileID: 7942736270631384145}
-  HPAmount: 30
   HP: 30
+  HPAmount: 30
+  HPBar: {fileID: 7942736270631384145}
 --- !u!114 &6725790584205911099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5127128133639324319
 BoxCollider2D:
   m_ObjectHideFlags: 0

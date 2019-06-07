@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 592313420890231638}
   - component: {fileID: 4434069397044933192}
   - component: {fileID: 6958379562187744594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ice Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,9 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2726878e2121074438386c46ad18c7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPBar: {fileID: 2756960632700901365}
-  HPAmount: 20
   HP: 20
+  HPAmount: 20
+  HPBar: {fileID: 2756960632700901365}
 --- !u!114 &-8509404498332166324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +244,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1001 &664044254538129660
 PrefabInstance:
   m_ObjectHideFlags: 0
