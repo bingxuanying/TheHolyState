@@ -15098,33 +15098,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 45, y: -22, z: 0}
-    second:
-      m_TileIndex: 1664
-      m_TileSpriteIndex: 1715
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 46, y: -22, z: 0}
-    second:
-      m_TileIndex: 1663
-      m_TileSpriteIndex: 1714
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 47, y: -22, z: 0}
-    second:
-      m_TileIndex: 1662
-      m_TileSpriteIndex: 1713
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: 48, y: -22, z: 0}
     second:
       m_TileIndex: 1661
@@ -15728,6 +15701,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 47, y: -19, z: 0}
+    second:
+      m_TileIndex: 1662
+      m_TileSpriteIndex: 1713
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 14, y: -18, z: 0}
     second:
       m_TileIndex: 1472
@@ -15989,6 +15971,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 47, y: -18, z: 0}
+    second:
+      m_TileIndex: 1663
+      m_TileSpriteIndex: 1714
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 14, y: -17, z: 0}
     second:
       m_TileIndex: 1313
@@ -16092,6 +16083,15 @@ Tilemap:
     second:
       m_TileIndex: 838
       m_TileSpriteIndex: 838
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 47, y: -17, z: 0}
+    second:
+      m_TileIndex: 1664
+      m_TileSpriteIndex: 1715
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
