@@ -11,15 +11,13 @@ namespace Assets.Scripts
         public static HashSet<SelectableCharacterController> AllSelectable =
             new HashSet<SelectableCharacterController>();
 
-        private NavMeshAgent _agent;
-
-        private bool _selected;
-
         private SpriteRenderer _spriteRenderer;
+
+        public bool Selected { get; private set; }
 
         public void OnDeselect(BaseEventData eventData)
         {
-            _selected = false;
+            Selected = false;
             _spriteRenderer.color = Color.white;
         }
 
@@ -36,17 +34,8 @@ namespace Assets.Scripts
 
         public void OnSelect(BaseEventData eventData)
         {
-            _selected = true;
+            Selected = true;
             _spriteRenderer.color = Color.grey;
-        }
-
-        private void Update()
-        {
-            if (_selected && Input.GetMouseButtonDown(1))
-            {
-                Debug.Log("Time to go");
-                _agent.destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            }
         }
 
         private void OnMouseUp()
@@ -59,7 +48,7 @@ namespace Assets.Scripts
 
         public static void DeselectAll(BaseEventData eventData)
         {
-            foreach (var selectableCharacterController in AllSelectable.Where(t => t._selected).ToList())
+            foreach (var selectableCharacterController in AllSelectable.Where(t => t.Selected).ToList())
                 selectableCharacterController.OnDeselect(eventData);
         }
 
@@ -67,9 +56,11 @@ namespace Assets.Scripts
         {
             AllSelectable.Add(this);
             _spriteRenderer = GetComponent<SpriteRenderer>();
-            _agent = GetComponent<NavMeshAgent>();
-            _agent.updateRotation = false;
-            _agent.updateUpAxis = false;
+        }
+
+        private void OnDestroy()
+        {
+            AllSelectable.Remove(this);
         }
     }
 }
