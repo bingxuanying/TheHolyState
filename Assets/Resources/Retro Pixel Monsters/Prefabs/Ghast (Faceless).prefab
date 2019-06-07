@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 454986}
   - component: {fileID: 21218274}
+  - component: {fileID: 572814131112424552}
   - component: {fileID: 9515408}
   - component: {fileID: 11454116}
+  - component: {fileID: 7970005921093667672}
   m_Layer: 0
   m_Name: Ghast (Faceless)
   m_TagString: Untagged
@@ -69,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300048, guid: cc3ea4bfea7d7a249b1a88f96c878684, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -81,6 +83,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &572814131112424552
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141986}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!95 &9515408
 Animator:
   serializedVersion: 3
@@ -115,3 +143,15 @@ MonoBehaviour:
   newSprite: {fileID: 2800000, guid: cc3ea4bfea7d7a249b1a88f96c878684, type: 3}
   folderPath: Retro Pixel Monsters/Spritesheets/
   useColorOutline: 1
+--- !u!114 &7970005921093667672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2917380bf84c35c4289cd7b942643d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
