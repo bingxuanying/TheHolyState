@@ -3,6 +3,7 @@
 namespace Assets.Scripts
 {
     [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(BoxCollider2D))]
     internal class SpellController : MonoBehaviour
     {
         private Rigidbody2D _rigidbody2D;

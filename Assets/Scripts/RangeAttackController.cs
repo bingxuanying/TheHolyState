@@ -2,6 +2,7 @@
 
 namespace Assets.Scripts
 {
+    [RequireComponent(typeof(SelectableCharacterController))]
     public class RangeAttackController : MonoBehaviour
     {
         private Animator _animator;
@@ -44,7 +45,7 @@ namespace Assets.Scripts
             if (Attack)
             {
                 _animator.SetBool("Attack", true);
-                _movableController.Stop();
+                _movableController?.Stop();
                 _timer += Time.deltaTime;
                 if (_timer >= AttackPeriod)
                 {
@@ -57,7 +58,7 @@ namespace Assets.Scripts
             else
             {
                 _animator.SetBool("Attack", false);
-                _movableController.Run();
+                _movableController?.Run();
                 _timer = AttackPeriod;
             }
         }

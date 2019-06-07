@@ -4,6 +4,8 @@ using UnityEngine.AI;
 
 namespace Assets.Scripts
 {
+    [RequireComponent(typeof(NavMeshAgent))]
+    [RequireComponent(typeof(SelectableCharacterController))]
     internal class MovableController : MonoBehaviour
     {
         private NavMeshAgent _agent;

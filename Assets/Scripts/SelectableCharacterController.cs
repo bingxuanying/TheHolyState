@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 namespace Assets.Scripts
 {
+    [RequireComponent(typeof(BoxCollider2D))]
+    [RequireComponent(typeof(Rigidbody2D))]
     internal class SelectableCharacterController : MonoBehaviour, ISelectHandler, IPointerClickHandler, IDeselectHandler
     {
         public static HashSet<SelectableCharacterController> AllSelectable =
