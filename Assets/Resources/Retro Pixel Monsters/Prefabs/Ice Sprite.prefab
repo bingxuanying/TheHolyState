@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2726878e2121074438386c46ad18c7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 20
-  HPAmount: 20
+  HP: 40
+  HPAmount: 40
   HPBar: {fileID: 2756960632700901365}
 --- !u!114 &-8509404498332166324
 MonoBehaviour:

@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e26e8f32dffb9147afe1cd77388ac95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackPeriod: 5
+  AttackPeriod: 4
   SpellPrefab: {fileID: 125730, guid: b9712cbab09e958498003c8a50aa18d7, type: 3}
 --- !u!195 &5770029282702050816
 NavMeshAgent:
