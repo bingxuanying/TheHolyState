@@ -31,6 +31,23 @@ namespace Assets
             return 0;
         }
 
+        public static Vector3 MainDirectionVec(this Vector3 vector)
+        {
+            //face right
+            if (Mathf.Abs(vector.x) > Mathf.Abs(vector.y) && vector.x > 0)
+                return Vector3.right;
+            //face left
+            if (Mathf.Abs(vector.x) > Mathf.Abs(vector.y) && vector.x < 0)
+                return Vector3.left;
+            //face up
+            if (Mathf.Abs(vector.x) < Mathf.Abs(vector.y) && vector.y > 0)
+                return Vector3.up;
+            //face down
+            if (Mathf.Abs(vector.x) < Mathf.Abs(vector.y) && vector.y < 0)
+                return Vector3.down;
+            return Vector3.zero;
+        }
+
         public static T RandomElementByWeight<T>(this IEnumerable<T> sequence, Func<T, float> weightSelector)
         {
             var enumerable = sequence.ToList();

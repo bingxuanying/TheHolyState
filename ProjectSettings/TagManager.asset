@@ -6,6 +6,16 @@ TagManager:
   tags:
   - Purify
   - Pollute
+  - Wood
+  - Goblin
+  - FireSpirit
+  - EarthSpirit
+  - IceSpirit
+  - WindSpirit
+  - Skull
+  - Slime
+  - Water
+  - Ghost
   layers:
   - Default
   - TransparentFX

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 3065460157597138923}
   m_Layer: 8
   m_Name: Ghast (Faceless)
-  m_TagString: Untagged
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

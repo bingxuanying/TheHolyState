@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 2322096595977402957}
   m_Layer: 8
   m_Name: Wind Sprite
-  m_TagString: Untagged
+  m_TagString: WindSpirit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

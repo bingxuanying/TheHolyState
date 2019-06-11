@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 4666890557673101741}
   m_Layer: 8
   m_Name: Goblin Thug (Yellow)
-  m_TagString: Untagged
+  m_TagString: Goblin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
