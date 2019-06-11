@@ -10,9 +10,9 @@ namespace Assets.Scripts
 {
     public class WaterController : MonoBehaviour
     {
-        private bool EnemyPolluted { get; set; }
-        private bool SelfPolluted { get; set; }
-        private int SlimeWaiting { get; set; } = 0;
+        public bool EnemyPolluted;
+        private bool SelfPolluted;
+        public int SlimeWaiting = 0;
         private float Timer { get; set; } = 0;
         public float GenerateTime = 10;
         public GameObject SlimePrefab;
