@@ -45,6 +45,9 @@ namespace Assets.Scripts
             if (Attack)
             {
                 _animator.SetBool("Attack", true);
+                var faceVector = _target.transform.position - transform.position;
+                _animator.SetInteger("Direction", faceVector.MainDirection());
+
                 _movableController?.Stop();
                 _timer += Time.deltaTime;
                 if (_timer >= AttackPeriod)

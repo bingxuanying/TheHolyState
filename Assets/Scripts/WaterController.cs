@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace Assets.Scripts
 {
@@ -14,21 +15,24 @@ namespace Assets.Scripts
         private float Timer { get; set; } = 0;
         public float GenerateTime = 10;
         public GameObject SlimePrefab;
+        public Vector2 GeneratePoint;
+        private Tilemap _tilemap;
 
         void Start()
         {
-
+            _tilemap = GetComponent<Tilemap>();
         }
 
         void Update()
         {
+            _tilemap.color = Polluted ? Color.red : Color.white;
+
             if (SlimeWaiting > 0)
                 Timer += Time.deltaTime;
             if (Timer >= GenerateTime)
             {
                 Timer -= GenerateTime;
-                var target = Instantiate(SlimePrefab, transform);
-                target.transform.localPosition = new Vector3(0, 0, 0);
+                Instantiate(SlimePrefab, new Vector3(GeneratePoint.x, GeneratePoint.y, 0), new Quaternion());
                 SlimeWaiting--;
                 if (SlimeWaiting == 0)
                     Timer = 0;
@@ -37,7 +41,7 @@ namespace Assets.Scripts
 
         void OnCollisionEnter2D(Collision2D col)
         {
-            if (col.gameObject.name == SlimePrefab.name)
+            if (col.gameObject.CompareTag("Pollute"))
             {
                 // TODO: Add animation
                 Destroy(col.gameObject);
@@ -46,10 +50,11 @@ namespace Assets.Scripts
                 if (Polluted)
                     SlimeWaiting += 2;
             }
-            else if (col.gameObject.name == "waterElement")
+            else if (col.gameObject.CompareTag("Purify"))
             {
                 if (Polluted)
                 {
+                    Destroy(col.gameObject);
                     Polluted = false;
                     SlimeWaiting = 0;
                     Timer = 0;

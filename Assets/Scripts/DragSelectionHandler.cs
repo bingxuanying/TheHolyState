@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
-    internal class DragSelectionHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
+    internal class DragSelectionHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerUpHandler
     {
         public Image SelectionBoxImage;
 
@@ -14,9 +14,6 @@ namespace Assets.Scripts
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            if (!(Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl) ||
-                  Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
-                SelectableCharacterController.DeselectAll(new BaseEventData(EventSystem.current));
             SelectionBoxImage.gameObject.SetActive(true);
             _startPosition = eventData.position;
             _selectionRect = new Rect();
@@ -52,17 +49,24 @@ namespace Assets.Scripts
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            SelectionBoxImage.gameObject.SetActive(false);
-            foreach (var selectable in SelectableCharacterController.AllSelectable)
+            if (_selectionRect.Area() > 1)
             {
-                if (_selectionRect.Contains(Camera.main.WorldToScreenPoint(selectable.transform.position)))
+                if (!(Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl) ||
+                      Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+                    SelectableCharacterController.DeselectAll(new BaseEventData(EventSystem.current));
+                foreach (var selectable in SelectableCharacterController.AllSelectable)
                 {
-                    selectable.OnSelect(eventData);
+                    if (_selectionRect.Contains(Camera.main.WorldToScreenPoint(selectable.transform.position)))
+                    {
+                        selectable.OnSelect(eventData);
+                    }
                 }
             }
+
+            SelectionBoxImage.gameObject.SetActive(false);
         }
 
-        public void OnPointerDown(PointerEventData eventData)
+        public void OnPointerUp(PointerEventData eventData)
         {
             if (eventData.button == PointerEventData.InputButton.Left)
             {

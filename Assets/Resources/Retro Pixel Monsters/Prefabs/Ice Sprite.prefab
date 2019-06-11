@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 6958379562187744594}
   m_Layer: 8
   m_Name: Ice Sprite
-  m_TagString: Untagged
+  m_TagString: Purify
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,7 +197,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 13
   m_ObstacleAvoidanceType: 4
 --- !u!61 &4434069397044933192
 BoxCollider2D:
