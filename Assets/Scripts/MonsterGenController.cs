@@ -45,7 +45,7 @@ namespace Assets.Scripts
                         GlobalVars.Wood -= monData.woodResource;
 
                         var monster = Instantiate(monData.Prefab, transform.position, Quaternion.identity);
-                        monster.GetComponent<HPController>().isEnemy = GetComponent<HPController>().isEnemy;
+                        monster.GetComponent<HPController>().isEnemy = GetComponent<HPController>()?.isEnemy ?? false;
                     }
                 }
             }

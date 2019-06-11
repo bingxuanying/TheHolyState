@@ -230,8 +230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2726878e2121074438386c46ad18c7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 10
-  HPAmount: 10
+  HP: 5
+  HPAmount: 5
   EnemyHPBar: {fileID: 987742338047971899}
   SelfHPBar: {fileID: 6744554238526442664}
   isEnemy: 1
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c042a32520b0674da1333403524c03c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackPeriod: 1
+  AttackPeriod: 4
   Damage: 2
 --- !u!1 &36876225563682475
 GameObject:
@@ -547,22 +547,22 @@ PrefabInstance:
     - target: {fileID: 6134330330229592765, guid: a8f1ce49b234d1e42bf09464eeb4804a,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.28693324
+      value: 0.21269184
       objectReference: {fileID: 0}
     - target: {fileID: 6134330330229592765, guid: a8f1ce49b234d1e42bf09464eeb4804a,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.5946821
+      value: 0.5344862
       objectReference: {fileID: 0}
     - target: {fileID: 6134330330229592765, guid: a8f1ce49b234d1e42bf09464eeb4804a,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.010032624
+      value: 0.012039185
       objectReference: {fileID: 0}
     - target: {fileID: 6134330330229592765, guid: a8f1ce49b234d1e42bf09464eeb4804a,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.89967376
+      value: 1.1685481
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8f1ce49b234d1e42bf09464eeb4804a, type: 3}

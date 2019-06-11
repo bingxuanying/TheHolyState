@@ -98,7 +98,6 @@ namespace Assets.Scripts
                 var dest = enemy.transform.position;
                 if (_movableController.SetDestination(dest))
                 {
-                    Attack = true;
                     _target = enemy;
                 }
             }

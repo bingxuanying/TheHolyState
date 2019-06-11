@@ -8,7 +8,7 @@ namespace Assets.Scripts
 {
     public static class GlobalVars
     {
-        public static bool IsGoblin;
+        public static bool IsGoblin = true;
         public static int Wood;
         public static int Water;
         public static int Goblin;

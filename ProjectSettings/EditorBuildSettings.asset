@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: db0051caf810cb14e87f092a9980929d
+  - enabled: 1
+    path: Assets/Scenes/TheHolyState.unity
+    guid: 7eab2a376b54ce347917cbb6344e7b24
+  - enabled: 1
+    path: Assets/Scenes/TheHolyState2.unity
+    guid: d9e76f5e2658f894a955963dbc132603
   m_configObjects: {}

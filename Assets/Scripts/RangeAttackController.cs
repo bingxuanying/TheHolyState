@@ -105,7 +105,7 @@ namespace Assets.Scripts
                 dest.y += Random.Range(-4, 4);
                 if (_movableController.SetDestination(dest))
                 {
-                    while (enemy != null && (gameObject.transform.position - enemy.transform.position).magnitude > 15)
+                    while (enemy != null && (gameObject.transform.position - enemy.transform.position).magnitude > 5)
                     {
                         yield return new WaitForSeconds(5);
                     }

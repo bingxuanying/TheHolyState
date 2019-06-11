@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 using InfoPanel;
 
@@ -17,11 +18,25 @@ public class GameHandler : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Tab))
         {
-            DireInfoPanelControl.DireShow();
+            if (GlobalVars.IsGoblin)
+            {
+                RadianceInfoPanelControl.RadianceShow();
+            }
+            else
+            {
+                DireInfoPanelControl.DireShow();
+            }
         }
         else
         {
-            DireInfoPanelControl.DireHide();
+            if (GlobalVars.IsGoblin)
+            {
+                RadianceInfoPanelControl.RadianceHide();
+            }
+            else
+            {
+                DireInfoPanelControl.DireHide();
+            }
         }
     }
 }

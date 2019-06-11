@@ -503,6 +503,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 802134666}
+    - target: {fileID: 4832632527215686797, guid: 32eca9990090f5f43a652af4901fab12,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: TheHolyState2
+      objectReference: {fileID: 0}
     - target: {fileID: 3128440900299379988, guid: 32eca9990090f5f43a652af4901fab12,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

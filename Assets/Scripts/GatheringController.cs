@@ -60,6 +60,7 @@ namespace Assets.Scripts
 
                     if (_target.CompareTag("Wood"))
                     {
+                        GlobalVars.Water += 1;
                         GlobalVars.Wood += 1;
                         Destroy(_target);
                         Gathering = false;

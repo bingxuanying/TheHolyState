@@ -97,6 +97,29 @@ public class HPController : MonoBehaviour
 
     public void OnDestroy()
     {
+        if (!isEnemy)
+        {
+            if (CompareTag("Goblin"))
+                GlobalVars.Goblin--;
+            if (CompareTag("FireSpirit"))
+                GlobalVars.FireSpirit--;
+            if (CompareTag("EarthSpirit"))
+                GlobalVars.EarthSpirit--;
+            if (CompareTag("IceSpirit") || CompareTag("Purify"))
+                GlobalVars.IceSpirit--;
+            if (CompareTag("WindSpirit"))
+                GlobalVars.WindSpirit--;
+            else if (CompareTag("Skeleton"))
+                GlobalVars.Skeleton--;
+            else if (CompareTag("WA"))
+                GlobalVars.WA--;
+            else if (CompareTag("WI"))
+                GlobalVars.WI--;
+            else if (CompareTag("Slime") || CompareTag("Pollute"))
+                GlobalVars.Slime--;
+            else if (CompareTag("Ghost"))
+                GlobalVars.Ghost--;
+        }
         AttackableGameObjects.Remove((gameObject, isEnemy));
     }
 }
