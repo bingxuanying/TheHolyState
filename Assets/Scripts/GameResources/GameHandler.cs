@@ -8,7 +8,8 @@ public class GameHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        DireInfoPanelControl.DireHide();
+        RadianceInfoPanelControl.RadianceHide();
     }
 
     // Update is called once per frame
@@ -16,11 +17,11 @@ public class GameHandler : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Tab))
         {
-            InfoPanelControl.Show();
+            RadianceInfoPanelControl.RadianceShow();
         }
         else
         {
-            InfoPanelControl.Hide();
+            RadianceInfoPanelControl.RadianceHide();
         }
     }
 }

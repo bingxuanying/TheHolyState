@@ -1131,16 +1131,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4747916521155014343, guid: 5660b963a709d0b4ba0a14175d833670,
-        type: 3}
-      propertyPath: m_Name
-      value: SpiritBoard
-      objectReference: {fileID: 0}
-    - target: {fileID: 4747916521582107939, guid: 5660b963a709d0b4ba0a14175d833670,
-        type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5660b963a709d0b4ba0a14175d833670, type: 3}
 --- !u!1001 &1072020733
