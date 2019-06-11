@@ -13,13 +13,16 @@ namespace Assets.Scripts
         private NavMeshAgent _agent;
         private float _savedSpeed;
         private SelectableCharacterController _selectableCharacterController;
+        private HPController _hpController;
 
         public bool IsStopped { get; private set; }
 
         private void Update()
         {
             if (_selectableCharacterController.Selected && Input.GetMouseButtonDown(1))
-                _agent.destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                if (_hpController == null || !_hpController.isEnemy)
+                    _agent.destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
             var agentVelocity = _agent.velocity;
             if (agentVelocity.magnitude < 1 && !IsStopped)
             {
@@ -34,6 +37,11 @@ namespace Assets.Scripts
             _animator.SetBool("Walk", !IsStopped);
         }
 
+        public bool SetDestination(Vector3 target)
+        {
+            return _agent.SetDestination(target);
+        }
+
         private void Start()
         {
             _animator = GetComponent<Animator>();
@@ -42,6 +50,7 @@ namespace Assets.Scripts
             _agent.updateRotation = false;
             _agent.updateUpAxis = false;
             _savedSpeed = _agent.speed;
+            _hpController = GetComponent<HPController>();
         }
 
         public void Stop()

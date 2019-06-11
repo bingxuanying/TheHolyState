@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,8 @@ public class HPController : MonoBehaviour
     public Image SelfHPBar;
     private Image HPBar;
     public bool isEnemy;
+
+    public static List<(GameObject,bool)> AttackableGameObjects = new List<(GameObject, bool)>();
 
     // Start is called before the first frame update
     private void Start()
@@ -48,6 +51,8 @@ public class HPController : MonoBehaviour
             else if (CompareTag("Ghost"))
                 GlobalVars.Ghost++;
         }
+
+        AttackableGameObjects.Add((gameObject, isEnemy));
     }
 
     // Update is called once per frame
@@ -88,5 +93,10 @@ public class HPController : MonoBehaviour
         _animator?.SetBool("Death", true);
         yield return new WaitForSeconds(0.3f);
         Destroy(gameObject);
+    }
+
+    public void OnDestroy()
+    {
+        AttackableGameObjects.Remove((gameObject, isEnemy));
     }
 }

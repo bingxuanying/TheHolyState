@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8173849064404870087}
   - component: {fileID: 8173849064404870086}
+  - component: {fileID: 3285871867672704588}
   m_Layer: 0
   m_Name: WindElementStatus
   m_TagString: Untagged
@@ -79,3 +80,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3285871867672704588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8173849064404870085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3f93954680aed40982485bff0e195b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Monsters:
+  - Weights: 1
+    Prefab: {fileID: 193474, guid: be275f270a2855a4b98e29b910a82ff1, type: 3}
+    waterResource: 25
+    woodResource: 5
+  GenerateTime: 10
+  Generating: 1
