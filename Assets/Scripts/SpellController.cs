@@ -37,6 +37,10 @@ namespace Assets.Scripts
                 hp.Hurt(Damage);
                 Destroy(gameObject);
             }
+            else
+            {
+                //Destroy(gameObject);
+            }
         }
     }
 }

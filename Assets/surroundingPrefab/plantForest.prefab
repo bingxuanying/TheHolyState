@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1739743804217793742}
   - component: {fileID: 1429947157091738730}
   - component: {fileID: 2247145324429951234}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: plantForest
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,6 +27,23 @@ public class HPController : MonoBehaviour
             HPBar = SelfHPBar;
             EnemyHPBar.enabled = false;
         }
+
+        if (CompareTag("Goblin"))
+            GlobalVars.Goblin++;
+        if (CompareTag("FireSpirit"))
+            GlobalVars.FireSpirit++;
+        if (CompareTag("EarthSpirit"))
+            GlobalVars.EarthSpirit++;
+        if (CompareTag("IceSpirit") || CompareTag("Purify"))
+            GlobalVars.IceSpirit++;
+        if (CompareTag("WindSpirit"))
+            GlobalVars.WindSpirit++;
+        else if (CompareTag("Skull"))
+            GlobalVars.Skull++;
+        else if (CompareTag("Slime") || CompareTag("Pollute"))
+            GlobalVars.Slime++;
+        else if (CompareTag("Ghost"))
+            GlobalVars.Ghost++;
     }
 
     // Update is called once per frame

@@ -16,5 +16,8 @@ namespace Assets.Scripts
         public static int EarthSpirit;
         public static int IceSpirit;
         public static int WindSpirit;
+        public static int Skull;
+        public static int Slime;
+        public static int Ghost;
     }
 }

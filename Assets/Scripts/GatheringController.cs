@@ -21,7 +21,7 @@ namespace Assets.Scripts
         {
             _selectableCharacterController = GetComponent<SelectableCharacterController>();
             _animator = GetComponent<Animator>();
-            _timer = GatheringPeriod;
+            _timer = 0;
         }
 
         private void Update()
@@ -34,7 +34,6 @@ namespace Assets.Scripts
                     Mathf.Infinity, 1 << 13);
                 if (hit)
                 {
-                    //TODO: Check partner or enemy
                     _target = hit.collider.transform.gameObject;
                 }
                 else
@@ -53,14 +52,24 @@ namespace Assets.Scripts
                 _timer += Time.deltaTime;
                 if (_timer >= GatheringPeriod)
                 {
-                    Destroy(_target);
-                    Gathering = false;
+                    if (_target.CompareTag("Water"))
+                    {
+                        GlobalVars.Water += 1;
+                        _timer -= GatheringPeriod;
+                    }
+
+                    if (_target.CompareTag("Wood"))
+                    {
+                        GlobalVars.Wood += 1;
+                        Destroy(_target);
+                        Gathering = false;
+                    }
                 }
             }
             else
             {
                 _animator.SetBool("Attack", false);
-                _timer = GatheringPeriod;
+                _timer = 0;
             }
         }
 

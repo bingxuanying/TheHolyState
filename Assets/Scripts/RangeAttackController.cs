@@ -56,7 +56,9 @@ namespace Assets.Scripts
                 if (_timer >= AttackPeriod)
                 {
                     var spell = Instantiate(SpellPrefab);
-                    spell.transform.position = transform.position;
+                    spell.transform.position = transform.position + Vector3.up * 0.5f;
+                    spell.transform.position +=
+                        (_target.transform.position - transform.position).MainDirectionVec() * 0.6f;
                     spell.GetComponent<SpellController>().Target = _target;
                     _timer -= AttackPeriod;
                 }
