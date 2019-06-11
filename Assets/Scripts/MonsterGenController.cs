@@ -32,6 +32,7 @@ namespace Assets.Scripts
                 Timer -= GenerateTime;
                 var monster = Instantiate(Monsters.RandomElementByWeight(t => t.Weights).Prefab,
                     transform.position, Quaternion.identity);
+                monster.GetComponent<HPController>().isEnemy = GetComponent<HPController>().isEnemy;
             }
         }
     }

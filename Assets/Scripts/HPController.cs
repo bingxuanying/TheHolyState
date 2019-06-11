@@ -7,12 +7,25 @@ public class HPController : MonoBehaviour
     private Animator _animator;
     public float HP = 10;
     public float HPAmount = 10;
-    public Image HPBar;
+    public Image EnemyHPBar;
+    public Image SelfHPBar;
+    private Image HPBar;
+    public bool isEnemy;
 
     // Start is called before the first frame update
     private void Start()
     {
         _animator = GetComponent<Animator>();
+        if (isEnemy)
+        {
+            HPBar = EnemyHPBar;
+            SelfHPBar.enabled = false;
+        }
+        else
+        {
+            HPBar = SelfHPBar;
+            EnemyHPBar.enabled = false;
+        }
     }
 
     // Update is called once per frame

@@ -32,9 +32,12 @@ namespace Assets.Scripts
                     Mathf.Infinity, 1 << 8);
                 if (hit)
                 {
-                    //TODO: Check partner or enemy
-                    Attack = true;
-                    _target = hit.collider.transform.gameObject;
+                    if (GetComponent<HPController>().isEnemy !=
+                        hit.collider.transform.gameObject.GetComponent<HPController>().isEnemy)
+                    {
+                        Attack = true;
+                        _target = hit.collider.transform.gameObject;
+                    }
                 }
                 else
                 {

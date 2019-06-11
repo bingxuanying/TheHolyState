@@ -23,7 +23,7 @@ namespace Assets.Scripts
             var agentVelocity = _agent.velocity;
             if (agentVelocity.magnitude < 1 && !IsStopped)
             {
-                _agent.destination = gameObject.transform.position;
+                //_agent.destination = gameObject.transform.position;
                 IsStopped = true;
             }
             else if (agentVelocity.magnitude >= 1)

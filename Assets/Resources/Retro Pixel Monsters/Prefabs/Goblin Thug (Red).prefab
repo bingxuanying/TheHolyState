@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8853426764963920831}
   - component: {fileID: 1655714184744488681}
   - component: {fileID: 866166334011344898}
+  - component: {fileID: 2304533183053862414}
   m_Layer: 8
   m_Name: Goblin Thug (Red)
   m_TagString: Untagged
@@ -139,7 +140,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 10
   HPAmount: 10
-  HPBar: {fileID: 5846146159786325060}
+  EnemyHPBar: {fileID: 5846146159786325060}
+  SelfHPBar: {fileID: 75994677016013527}
+  isEnemy: 0
 --- !u!195 &8015671251960080153
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -247,6 +250,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackPeriod: 1
   Damage: 5
+--- !u!114 &2304533183053862414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b51e31818411884593847b3ceb98d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GatheringPeriod: 1
 --- !u!1 &1203478000699112465
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +545,18 @@ RectTransform:
 --- !u!114 &5846146159786325060 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3419808462802908937, guid: 55db7bcc617d05844b682f1f00e01a78,
+    type: 3}
+  m_PrefabInstance: {fileID: 9102961601512604493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &75994677016013527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9176589574916417946, guid: 55db7bcc617d05844b682f1f00e01a78,
     type: 3}
   m_PrefabInstance: {fileID: 9102961601512604493}
   m_PrefabAsset: {fileID: 0}

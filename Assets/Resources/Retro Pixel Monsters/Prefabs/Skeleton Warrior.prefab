@@ -232,7 +232,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 10
   HPAmount: 10
-  HPBar: {fileID: 4641365601421347134}
+  EnemyHPBar: {fileID: 4641365601421347134}
+  SelfHPBar: {fileID: 1172382142053750701}
+  isEnemy: 1
 --- !u!114 &1126151696562313841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +531,18 @@ RectTransform:
 --- !u!114 &4641365601421347134 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3419808462802908937, guid: 55db7bcc617d05844b682f1f00e01a78,
+    type: 3}
+  m_PrefabInstance: {fileID: 8006530157350370871}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1172382142053750701 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9176589574916417946, guid: 55db7bcc617d05844b682f1f00e01a78,
     type: 3}
   m_PrefabInstance: {fileID: 8006530157350370871}
   m_PrefabAsset: {fileID: 0}
