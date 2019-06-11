@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Window_WoodResource : MonoBehaviour
+namespace Assets.Scripts
 {
-    // Start is called before the first frame update
-    private void UpdateResourceTextObject()
+    public class Window_WoodResource : MonoBehaviour
     {
-        //transform.Find("WoodAmount").GetComponent<Text>().text = GameResources.GetGoldAmout();
+        // Start is called before the first frame update
+        private void UpdateResourceTextObject()
+        {
+            transform.Find("WoodAmount").GetComponent<UnityEngine.UI.Text>().text = GlobalVars.Wood.ToString();
+        }
     }
 }
