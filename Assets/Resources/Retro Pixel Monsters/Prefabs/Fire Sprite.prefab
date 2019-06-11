@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5867033384114536459}
   - component: {fileID: 1687145619835823728}
   - component: {fileID: 5127128133639324319}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Fire Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4567166269397972258}
   - component: {fileID: 8430133996902826318}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: MinimapIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,6 +336,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092341737723108325, guid: 55db7bcc617d05844b682f1f00e01a78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5673534125037701617, guid: 55db7bcc617d05844b682f1f00e01a78,
         type: 3}
@@ -441,6 +446,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787621124737711577, guid: 55db7bcc617d05844b682f1f00e01a78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6578312089401662137, guid: 55db7bcc617d05844b682f1f00e01a78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55db7bcc617d05844b682f1f00e01a78, type: 3}
