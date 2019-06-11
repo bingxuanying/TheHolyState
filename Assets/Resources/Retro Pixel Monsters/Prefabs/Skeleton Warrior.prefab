@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 1126151696562313841}
   m_Layer: 8
   m_Name: Skeleton Warrior
-  m_TagString: Skull
+  m_TagString: WA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,11 +335,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 412060}
     m_Modifications:
-    - target: {fileID: 9050261825311808150, guid: a8f1ce49b234d1e42bf09464eeb4804a,
-        type: 3}
-      propertyPath: m_Name
-      value: MeleeCollidePrefab
-      objectReference: {fileID: 0}
     - target: {fileID: 357177867433851662, guid: a8f1ce49b234d1e42bf09464eeb4804a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -394,6 +389,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050261825311808150, guid: a8f1ce49b234d1e42bf09464eeb4804a,
+        type: 3}
+      propertyPath: m_Name
+      value: MeleeCollidePrefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8f1ce49b234d1e42bf09464eeb4804a, type: 3}

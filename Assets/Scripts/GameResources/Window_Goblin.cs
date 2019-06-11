@@ -6,7 +6,7 @@ namespace Assets.Scripts
 {
     public class Window_Goblin : MonoBehaviour
     {
-        private void Awake()
+        private void Update()
         {
             UpdateResourceTextObject();
         }

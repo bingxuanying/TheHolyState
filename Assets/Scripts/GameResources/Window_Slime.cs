@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Window_Slime : MonoBehaviour
+namespace Assets.Scripts
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Window_Slime : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Update()
+        {
+            UpdateResourceTextObject();
+        }
+        // Start is called before the first frame update
+        private void UpdateResourceTextObject()
+        {
+            transform.Find("Amount").GetComponent<UnityEngine.UI.Text>().text = GlobalVars.Slime.ToString();
+        }
     }
 }

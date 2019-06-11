@@ -12,10 +12,12 @@ TagManager:
   - EarthSpirit
   - IceSpirit
   - WindSpirit
-  - Skull
   - Slime
   - Water
   - Ghost
+  - Skeleton
+  - WA
+  - WI
   layers:
   - Default
   - TransparentFX

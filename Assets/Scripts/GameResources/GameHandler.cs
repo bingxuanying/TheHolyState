@@ -17,11 +17,11 @@ public class GameHandler : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Tab))
         {
-            RadianceInfoPanelControl.RadianceShow();
+            DireInfoPanelControl.DireShow();
         }
         else
         {
-            RadianceInfoPanelControl.RadianceHide();
+            DireInfoPanelControl.DireHide();
         }
     }
 }

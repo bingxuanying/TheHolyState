@@ -37,8 +37,12 @@ public class HPController : MonoBehaviour
                 GlobalVars.IceSpirit++;
             if (CompareTag("WindSpirit"))
                 GlobalVars.WindSpirit++;
-            else if (CompareTag("Skull"))
-                GlobalVars.Skull++;
+            else if (CompareTag("Skeleton"))
+                GlobalVars.Skeleton++;
+            else if (CompareTag("WA"))
+                GlobalVars.WA++;
+            else if (CompareTag("WI"))
+                GlobalVars.WI++;
             else if (CompareTag("Slime") || CompareTag("Pollute"))
                 GlobalVars.Slime++;
             else if (CompareTag("Ghost"))
