@@ -32,9 +32,9 @@ public class HPController : MonoBehaviour
 
     private IEnumerator HurtAnimation()
     {
-        _animator.SetBool("Hurt", true);
+        _animator?.SetBool("Hurt", true);
         yield return new WaitForSeconds(0.1f);
-        _animator.SetBool("Hurt", false);
+        _animator?.SetBool("Hurt", false);
     }
 
     public void Heal(float hp)
@@ -50,7 +50,7 @@ public class HPController : MonoBehaviour
     {
         HP = 0;
         HPBar.fillAmount = 0;
-        _animator.SetBool("Death", true);
+        _animator?.SetBool("Death", true);
         yield return new WaitForSeconds(0.3f);
         Destroy(gameObject);
     }

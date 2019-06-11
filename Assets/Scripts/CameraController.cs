@@ -22,9 +22,9 @@ namespace Assets.Scripts
         public float LerpTime = 0.5f;
 
         private float _timer = 0;
-
+        
+        private Vector3 _lastSpeed = Vector3.zero;
         private Vector3 _lastMove = Vector3.zero;
-        private Vector3 _lastRealMove = Vector3.zero;
 
         void Update()
         {
@@ -37,69 +37,58 @@ namespace Assets.Scripts
                 _timer = LerpTime;
             }
 
+            var noMove = true;
+            var move = Vector3.zero;
+
             // Check if on the right edge
             if (Input.mousePosition.x >= Screen.width - Delta)
             {
-                _lastMove = Vector3.right;
-                // reset timer if direction changes
-                if (_lastRealMove != _lastMove)
-                    _timer = 0;
-                _lastRealMove = _lastMove;
-                // Move the camera
-                transform.position += Vector3.Lerp(Vector3.zero, _lastMove, _timer / LerpTime) * Time.deltaTime *
-                                      Speed;
+                noMove = false;
+                move += Vector3.right;
             }
 
             // Check if on the left edge
-            else if (Input.mousePosition.x <= Delta)
+            if (Input.mousePosition.x <= Delta)
             {
-                _lastMove = Vector3.left;
-                // reset timer if direction changes
-                if (_lastRealMove != _lastMove)
-                    _timer = 0;
-                _lastRealMove = _lastMove;
-                // Move the camera
-                transform.position += Vector3.Lerp(Vector3.zero, _lastMove, _timer / LerpTime) * Time.deltaTime *
-                                      Speed;
+                noMove = false;
+                move += Vector3.left;
             }
 
             // Check if on the top edge
-            else if (Input.mousePosition.y <= Delta)
+            if (Input.mousePosition.y <= Delta)
             {
-                _lastMove = Vector3.down;
-                // reset timer if direction changes
-                if (_lastRealMove != _lastMove)
-                    _timer = 0;
-                _lastRealMove = _lastMove;
-                // Move the camera
-                transform.position += Vector3.Lerp(Vector3.zero, _lastMove, _timer / LerpTime) * Time.deltaTime *
-                                      Speed;
+                noMove = false;
+                move += Vector3.down;
             }
 
             // Check if on the bottom edge
-            else if (Input.mousePosition.y >= Screen.height - Delta)
+            if (Input.mousePosition.y >= Screen.height - Delta)
             {
-                _lastMove = Vector3.up;
-                // reset timer if direction changes
-                if (_lastRealMove != _lastMove)
-                    _timer = 0;
-                _lastRealMove = _lastMove;
-                // Move the camera
-                transform.position += Vector3.Lerp(Vector3.zero, _lastMove, _timer / LerpTime) * Time.deltaTime *
-                                      Speed;
+                noMove = false;
+                move += Vector3.up;
             }
 
             // Stop moving
-            else
+            if (noMove)
             {
-                // reset timer if direction changes
-                if (_lastRealMove != Vector3.zero)
+                if (_lastSpeed != Vector3.zero)
                     _timer = 0;
                 // Move the camera
                 transform.position += Vector3.Lerp(_lastMove, Vector3.zero, _timer / LerpTime) * Time.deltaTime *
                                       Speed;
-                _lastRealMove = Vector3.zero;
+                _lastSpeed = Vector3.zero;
             }
+            else
+            {
+                if (_lastSpeed == Vector3.zero)
+                    _timer = 0;
+                // Move the camera
+                transform.position += Vector3.Lerp(Vector3.zero, move, _timer / LerpTime) * Time.deltaTime *
+                                      Speed;
+                _lastMove = move;
+                _lastSpeed = move;
+            }
+
         }
     }
 }

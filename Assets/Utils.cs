@@ -30,5 +30,23 @@ namespace Assets
                 return 0;
             return 0;
         }
+
+        public static T RandomElementByWeight<T>(this IEnumerable<T> sequence, Func<T, float> weightSelector)
+        {
+            var enumerable = sequence.ToList();
+            var totalWeight = enumerable.Sum(weightSelector);
+            // The weight we are after...
+            var itemWeightIndex = new System.Random().NextDouble() * totalWeight;
+            float currentWeightIndex = 0;
+
+            foreach (var item in enumerable.Select(t => new {Value = t, Weight = weightSelector(t)}))
+            {
+                currentWeightIndex += item.Weight;
+                if (currentWeightIndex >= itemWeightIndex)
+                    return item.Value;
+            }
+
+            return default(T);
+        }
     }
 }
