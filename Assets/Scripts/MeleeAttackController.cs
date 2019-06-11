@@ -35,8 +35,8 @@ namespace Assets.Scripts
                     Mathf.Infinity, (1 << 8) + (1 << 14));
                 if (hit)
                 {
-                    if (GetComponent<HPController>().isEnemy !=
-                        hit.collider.transform.gameObject.GetComponent<HPController>().isEnemy)
+                    var hpController = hit.collider.transform.gameObject.GetComponent<HPController>();
+                    if (hpController != null && GetComponent<HPController>().isEnemy != hpController.isEnemy)
                         _target = hit.collider.transform.gameObject;
                 }
                 else
