@@ -34,6 +34,10 @@ Clicking the correspondent buildings will enable the feature of producing units.
 
 All units have their walking, idle, attacking, and death animations. A unit walking on different direction will trigger different animations. There is also animation on clicking buttons; at the starting menu, when the mouse is on the “Start” label, the label will be enlarged.
 
+Most of the animation, map tiles and units prefab comes from unity store.
+
+The cover art are generated from https://www.pixilart.com/draw.
+
 ## Input
 
 *Mouse Input* - Since the game is an RTS game, we chose the mouse and keyboard as the only available input devices. However, Unity does not have strong support for mouse operations like drag and drop. Even we used event system to implement the drag and drop operations, the event system did not have a bubble mechanism that allows other objects to receive events again, and only the first layer (usually camera) have the chance to receive listened events. Therefore, we used a lot of dirty hacks to reach our design target. One of the dirty hacks is polling mouse events in the update function and use Raycasting to determine the selected object. 
