@@ -66,7 +66,15 @@ N/A
 
 ## Narrative Design
 
-N/A
+The background of the game is that one day there is a holy state suddenly appear at the middle of the Pacific Ocean. And there are two sides of creatures there trying to conquest the state. 
+I have originally tried to design a game map with three layers. Each layer will have its entrances around and otherwise separated by walls. The Boss Palaces will be put at the middle of the map. Here is my original drawing.
+ 
+And therefore, our map is created as:
+ 
+For the game mechanics, we want the unit to find its own shortest path when we select units and right click on other places on map. Therefore, we implement the algorithm, which are scripts in assets/NavMeshComponent folder.
+As for the Arms System, we decided to have two different groups of soldier or unit. One is named Radiance and is consisted of Goblins and Element Spirits; the other one is named Die and is consisted of slime, skeleton army, and ghosts. Each side has both ranger and melee units.
+In order to make the game more fun, each side will have different resource gathering systems and unit producing systems. I have explained this part at the Gamplay section. To implement them, there is a script allow the goblin to destroy the plant, or in another word, gather the wood; and there is another script to allow the Dire side automatically generate units.
+We have also implemented AI system to allow the user fight against computer. However, the AI is pretty dumb. We ultimately want to make it a person-versus-person game, but that would take too much time. Since there are only two of us in this group, we don’t really have time to get that part down.
 
 ## Press Kit and Trailer
 
